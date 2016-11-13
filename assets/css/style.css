@@ -1,0 +1,124 @@
+body {
+
+}
+
+img {
+}
+
+h1 {
+	font-size: 1002px;
+}
+
+
+/*wraps the entire content of the page*/
+.container {
+	border: 4px solid #000;
+	max-width: 1024px;
+}
+
+
+
+/*=============================================================================*/
+/*nav Stuff*/
+
+/*nav Container*/
+nav {
+	background-color: #e6f0ff;
+	width: 100%;	
+}
+
+.logo {
+	display: inline-block;
+	height: 100%;
+	max-width: 80px;
+	width: 100%;
+}
+.logo_title {
+	display: inline-block;
+}
+
+/*nav Stuff*/
+/*==================================*/
+
+
+.nav_buttons_container {
+	float: right;
+	overflow: auto;
+	width: auto;
+}
+.nav_buttons {
+	display: inline-block;
+	padding: 10px;
+	width: 80px;
+}
+
+/*=============================================================================*/
+
+#bookshelf_container { 
+	border: 4px solid #99ffdd;
+	display: inline-block;
+	height: 100%;
+	max-height: 600px;
+	max-width: 400px;
+	padding: 0px;
+	position: relative;
+	width: 100%;
+}
+.books {
+/*	border: 2px solid #99ffdd;  */
+	margin-bottom: 20px;
+}
+/*  bookshelf image  */
+
+.bookshelf {
+/*	border: 5px solid #0040ff;  */
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+/*s  helf row  */
+.shelf {
+	left: 0px;
+	max-width: 400px;
+	position: absolute;
+	width: 98%;
+	top: 45px;
+}
+
+/*=============================================================================*/
+
+
+.stuff_goes_here {
+	background-color: #bf8040;
+	display: inline-block;
+	height: 100%;
+	max-height: 600px;
+	max-width: 400px;
+	padding: 0px;
+	width: 100%;
+}
+
+/*=============================================================================*/
+
+
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+	.shelf-bg {
+		background: url(../../assets/images/shelf.PNG) no-repeat;
+		width:100%;
+		height:100%;
+	}
+
+	img {
+		height: 100px;
+		width: 100px;
+	}
+}
