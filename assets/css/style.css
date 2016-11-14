@@ -55,6 +55,10 @@ nav {
 	display: inline-block;
 }
 
+#txtBookSearch {
+	height: 40px;
+	width: 200px;
+}
 
 /*==================================*/
 /*nav Buttons*/
@@ -109,7 +113,9 @@ nav {
 
 /*=============================================================================*/
 /*  Book Information Section  */
-
+#divDescription {
+	padding: 20px;
+}
 .book {
 	padding: 10px;
 	width: 40%;
@@ -117,13 +123,12 @@ nav {
 .book_title {
 
 }
-
-
-
-
-
 /*=============================================================================*/
-
+footer {
+	background-color: #e6f0ff;
+	height: 100px;
+	width: 100%;	
+}
 
 @media screen and (max-width: 980px) {
 
