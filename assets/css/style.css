@@ -9,10 +9,27 @@ h1 {
 	font-size: 1002px;
 }
 
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
 
 /*  wraps the entire content of the page including the Nav  */
 .container {
-	border: 4px solid #000;
+/*	border: 4px solid #000;*/
 	max-width: 1024px;
 }
 
@@ -57,6 +74,7 @@ nav {
 
 #txtBookSearch {
 	height: 40px;
+	margin: 10px;
 	width: 200px;
 }
 
@@ -90,25 +108,35 @@ nav {
 	width: 100%;
 }
 .books {
-/*	border: 2px solid #99ffdd;  */
+	border: 2px solid #99ffdd;  
 	margin-bottom: 20px;
+	
 }
 /*  bookshelf image  */
-
 .bookshelf {
-/*	border: 5px solid #0040ff;  */
+	border: 5px solid #0040ff;  
 	height: 100%;
 	position: relative;
+	overflow: auto;
 	width: 100%;
+
+}
+/*  shelf row  */
+.search_shelf {
+	left: 20px;
+	max-width: 400px;
+	position: absolute;
+	width: 98%;
+	top: 45px;
 }
 
-/*  shelf row  */
+/*  List of Books  */
 .shelf {
 	left: 0px;
 	max-width: 400px;
 	position: absolute;
 	width: 98%;
-	top: 45px;
+	top: 145px;
 }
 
 /*=============================================================================*/
