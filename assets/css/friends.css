@@ -61,10 +61,6 @@ nav {
 	font-family: 'momtw';
 }
 
-#txtBookSearch {
-	height: 40px;
-	width: 200px;
-}
 
 /*==================================*/
 /*nav Buttons*/
@@ -118,23 +114,26 @@ nav {
 }
 
 /*=============================================================================*/
-/*  Book Information Section  */
-#divDescription {
-	padding: 20px;
-}
-.book {
-	padding: 10px;
-	width: 40%;
-}
-.book_title {
+/*  Friends Section  */
 
+.panel {
+	margin-top: 20px;
+	width: 570px;
 }
+
+.placeholder {
+	display: inline-block;
+}
+
+.placeholder img {
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+}
+
+
 /*=============================================================================*/
-footer {
-	background-color: #e6f0ff;
-	height: 100px;
-	width: 100%;	
-}
+
 
 @media screen and (max-width: 980px) {
 

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'momtw';
+  src: url('momtw.TTF')
+}
+
+/*wraps the entire content of the page*/
+.container {
+  border: 4px solid #000;
+  max-width: 1024px;
+}
+
+
+
+/*=============================================================================*/
+/*nav Stuff*/
+
+/*nav Container*/
+nav {
+  background-color: #e6f0ff;
+  width: 100%;  
+}
+
+.logo {
+  display: inline-block;
+  height: 100%;
+  max-width: 80px;
+  width: 100%;
+}
+.logo_title {
+  display: inline-block;
+  font-family: 'momtw';
+}
+
+/*nav Stuff*/
+/*==================================*/
+
+
+.nav_buttons_container {
+  float: right;
+  overflow: auto;
+  width: auto;
+}
+.nav_buttons {
+  display: inline-block;
+  padding: 10px;
+  width: 80px;
+}
+
+/*=============================================================================*/
+
+#login {
+  box-shadow: 0 0 18px #ccc;
+  width: 350px;
+}
+
+#mainbody {
+  margin-top: 60px;
+}
+
+#text {
+  text-align: center;
+}
+
+#text p {
+  font-family: cursive;
+  font-size: 20px;
+}
