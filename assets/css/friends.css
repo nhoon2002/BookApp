@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'momtw';
+  src: url('momtw.TTF')
+}
+
+body {
+
+}
+
+img {
+}
+
+h1 {
+	font-size: 1002px;
+}
+
+
+/*  wraps the entire content of the page including the Nav  */
+.container {
+	border: 4px solid #000;
+	max-width: 1024px;
+}
+
+/*  Wraps the main content  */
+.content {
+		border: 4px solid #ff00ff;
+		overflow: auto;
+}
+
+/*  Right Side Content Container  */
+.stuff_goes_here {
+	background-color:;
+	border: 2px solid #00ff40;
+	display: inline-block;
+	height: 100%;
+	height: 600px;
+	max-width: 500px;
+	float: left;
+	padding: 0px;
+	width: 100%;
+}
+
+/*=============================================================================*/
+/*nav Stuff*/
+/*nav Stuff*/
+
+/*nav Container*/
+nav {
+	background-color: #e6f0ff;
+	width: 100%;	
+}
+
+.logo {
+	display: inline-block;
+	height: 100%;
+	max-width: 80px;
+	width: 100%;
+}
+.logo_title {
+	display: inline-block;
+	font-family: 'momtw';
+}
+
+
+/*==================================*/
+/*nav Buttons*/
+
+.nav_buttons_container {
+	float: right;
+	overflow: auto;
+	width: auto;
+}
+.nav_buttons {
+	display: inline-block;
+	padding: 10px;
+	width: 80px;
+}
+
+/*=============================================================================*/
+/*Book Shelf*/
+/*Book Shelf*/
+
+#bookshelf_container { 
+	border: 4px solid #99ffdd;
+	display: inline-block;
+	height: 100%;
+	margin: 0 auto;
+	max-height: 600px;
+	max-width: 400px;
+	padding: 0px;
+	position: relative;
+	width: 100%;
+}
+.books {
+/*	border: 2px solid #99ffdd;  */
+	margin-bottom: 20px;
+}
+/*  bookshelf image  */
+
+.bookshelf {
+/*	border: 5px solid #0040ff;  */
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+/*  shelf row  */
+.shelf {
+	left: 0px;
+	max-width: 400px;
+	position: absolute;
+	width: 98%;
+	top: 45px;
+}
+
+/*=============================================================================*/
+/*  Friends Section  */
+
+.panel {
+	margin-top: 20px;
+	width: 570px;
+}
+
+.placeholder {
+	display: inline-block;
+}
+
+.placeholder img {
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+}
+
+
+/*=============================================================================*/
+
+
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+	.shelf-bg {
+		background: url(../../assets/images/shelf.PNG) no-repeat;
+		width:100%;
+		height:100%;
+	}
+
+	img {
+		height: 100px;
+		width: 100px;
+	}
+}
