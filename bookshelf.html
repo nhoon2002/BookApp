@@ -14,6 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 <!--  Bootstrap Components  ========================================================= -->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 	<!-- Bootstrap Components -->
 		<!-- Latest compiled and minified CSS -->
@@ -70,14 +72,14 @@
 						<!-- Shelf -->
 		      			<div class="shelf">
 		  				<!-- Area books are added to shelf -->
-			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
+			  				<!-- <div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book1.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book1.png" class="img-responsive" /></div>
 
 			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book1.PNG" class="img-responsive" /></div>
-			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
+			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div> -->
 			  			</div>      	
 
 		  		</div><!-- End Left Side bookshelf container -->
@@ -99,8 +101,7 @@
 
 
 
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
 
 <script>
 
@@ -161,10 +162,29 @@ $(document).ready(function () {  // only begin once page has loaded
                 $('#divDescription').append('<a href="http://www.worldcat.org/isbn/' + ui.item.isbn[0].identifier + '" target="_blank">View item on worldcat</a>');
             }
             // add button to append the book on the shelf
-            $('#divDescription').append('<img src="assets/images/add_book.png">');
+            var addBookButton = $('<button>');
+            addBookButton.addClass("addToShelf");
+
+            var addBookImage = $("<img>");
+            addBookImage.attr("src", "assets/images/add_book.png");
+
+            addBookButton.prepend(addBookImage);
+            // $('#divDescription').append('<img src="assets/images/add_book.png">');
+            $('#divDescription').append(addBookButton);
+
+            $('.addToShelf').on('click', function() {
+            	console.log("test");
+            	$(".shelf").append('<div class="books col-xs-3 delete"><img src=' + ui.item.image + ' class="img-responsive" /></div>');
+            });
+
+            $(document).on('click', '.delete', function(){
+            	$(this).remove();
+            });
+
         },
         minLength: 2 // set minimum length of text the user must enter
     });
+
 });
 </script>
 
