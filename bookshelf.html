@@ -43,7 +43,6 @@
 
 	 	<!-- Main Title -->
 	 	<h1 class="logo_title">MyBookLibrary</h1>
-	 	<input id="txtBookSearch" type="text">
 		
 		<!-- Top Right navigation buttons -->
 		<div class="nav_buttons_container">
@@ -61,14 +60,21 @@
 		      	<div id="bookshelf_container" class="col-sm-6">
 		      		<img class="bookshelf" src="assets/images/shelf.png">
 
+
+						<!-- Book Search Section -->
+						<div class="search_shelf ">
+		  				<div class="books col-xs-3"><img src="assets/images/add_book.PNG" class="img-responsive" /></div>
+	 					<input id="txtBookSearch" class="col-xs-3" type="text">
+						</div>
+
 						<!-- Shelf -->
 		      			<div class="shelf">
-			  				<div class="books col-xs-3"><img src="assets/images/add_book.PNG" class="img-responsive" /></div>
+		  				<!-- Area books are added to shelf -->
 			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book1.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
-
 			  				<div class="books col-xs-3"><img src="assets/images/book1.png" class="img-responsive" /></div>
+
 			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book1.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
@@ -85,10 +91,10 @@
 
 		</div>	<!-- End Main Content Container  -->
 
+<footer></footer>
+
 </div> <!-- End Main content wrapper that holds everything -->
 
-
-<footer></footer>
 
 
 
@@ -97,6 +103,10 @@
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 <script>
+
+// JS for autosearch of books and display of results   =====================================
+
+
 $(document).ready(function () {  // only begin once page has loaded
     $("#txtBookSearch").autocomplete({ // attach auto-complete functionality to textbox
         // define source of the data
@@ -150,6 +160,8 @@ $(document).ready(function () {  // only begin once page has loaded
                 $('#divDescription').append('<P><b>ISBN:</b> ' + ui.item.isbn[0].identifier + '</p>');
                 $('#divDescription').append('<a href="http://www.worldcat.org/isbn/' + ui.item.isbn[0].identifier + '" target="_blank">View item on worldcat</a>');
             }
+            // add button to append the book on the shelf
+            $('#divDescription').append('<img src="assets/images/add_book.png">');
         },
         minLength: 2 // set minimum length of text the user must enter
     });
