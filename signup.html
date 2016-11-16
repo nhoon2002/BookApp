@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>My Book Library</title>
+	<title>My Book Library | Sign-Up</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/signin.css">
 	<!-- Latest compiled and minified CSS -->
-	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -53,12 +53,16 @@
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" id= 'userName' name="email" type="email" autofocus>
+												<input class="form-control" id="userDisplay" placeholder="Name to be displayed" name="email" type="text" autofocus>
+											</div>
+											<div class="form-group">
+										   	<input class="form-control" id="userName" placeholder="E-mail" name="email" type="email" autofocus>
                                 </div>
+
                                 <div class="form-group">
-                                    <input class="form-control" id= 'userPw' placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" id="userPw" placeholder="Password" name="password" type="password" value="">
                                 </div>
-                                <button type="button" class="btn btn-success btn-block" a href="signin.js" id='createSubmit'>Sign Up</button><br>
+                                <button type="button" class="btn btn-success btn-block" id="createSubmit">Sign Up</button><br>
 
                             </fieldset>
                         </form>
