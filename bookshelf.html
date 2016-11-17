@@ -59,13 +59,14 @@
 		 <div class="content">
 
 		 		<!-- Left Side bookshelf container -->
+		      	
 		      	<div id="bookshelf_container" class="col-sm-6">
 		      		<img class="bookshelf" src="assets/images/shelf.png">
 
 
 						<!-- Book Search Section -->
 						<div class="search_shelf ">
-		  				<div class="books col-xs-3"><img src="assets/images/add_book.PNG" class="img-responsive" /></div>
+		  				<div class="books col-xs-3"><img src="assets/images/nav/search.PNG" class="img-responsive" /></div>
 	 					<input id="txtBookSearch" class="col-xs-3" type="text">
 						</div>
 
@@ -80,8 +81,9 @@
 			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book1.PNG" class="img-responsive" /></div>
 			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div> -->
+										  			
 			  			</div>      	
-
+					
 		  		</div><!-- End Left Side bookshelf container -->
 
 				<!-- Main Right Side Content goes here -->
@@ -169,11 +171,9 @@ $(document).ready(function () {  // only begin once page has loaded
             addBookImage.attr("src", "assets/images/add_book.png");
 
             addBookButton.prepend(addBookImage);
-            // $('#divDescription').append('<img src="assets/images/add_book.png">');
             $('#divDescription').append(addBookButton);
 
             $('.addToShelf').on('click', function() {
-            	console.log("test");
             	$(".shelf").append('<div class="books col-xs-3 delete"><img src=' + ui.item.image + ' class="img-responsive" /></div>');
             });
 

@@ -115,7 +115,9 @@ nav {
 }
 .books {
 	border: 2px solid #99ffdd;  
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
+	width: 100px;
+	height: 100px;
 	
 }
 /*  bookshelf image  */
