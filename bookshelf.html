@@ -2,195 +2,130 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>My Book Library</title>
-	<meta name="description" content="My Book Library">
+    <meta charset="UTF-8">
+    <title>My Book Library | Bookshelf</title>
+    <meta name="description" content="My Book Library">
     <meta name="author" content="libraries saved">
 
-	<!-- Stylesheet for Auto-Search  -->
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <!-- Stylesheet for Auto-Search  -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-<!--  Bootstrap Components  ========================================================= -->
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- Bootstrap Components -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Bootstrap Components -->
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<!-- ================================================================================= -->
+    <!--  CSS  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/nav.css">
 
 </head>
 
 
 <body>
-  
 
-<!--  Main content wrapper that holds everything --> 
+
+<!--  Main content wrapper that holds everything -->
 <div class="container">
 
- 	<nav>
+    <!-- ========================================================================================== -->
+    <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
 
-		<!-- Top left Logo -->
-	 	<img class="logo" src="assets/images/nav/logo.png">
+                    <!-- Hamburger menu button when mobile size -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-	 	<!-- Main Title -->
-	 	<h1 class="logo_title">MyBookLibrary</h1>
-		
-		<!-- Top Right navigation buttons -->
-		<div class="nav_buttons_container">
-			<a href="#"><img class="nav_buttons" src="assets/images/nav/search.png"></a>
-			<a href="friends.html"><img class="nav_buttons" src="assets/images/nav/friends.png"></a>
-			<a href="signin.html"><img class="nav_buttons" src="assets/images/nav/profile.png" style="width: 60px; margin-right: 30px"></a>
-		</div>
+                        <!-- Top left Logo -->
+                        <img class="logo" src="assets/images/nav/logo.png">
+                        <!-- Main Title -->
+                        <h1 class="logo_title">MyBookLibrary</h1>
 
- 	</nav>  
+                </div>
 
-		<!-- Main Content Container  -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+                        <li><a class="page-scroll" href="bookshelf.html"><img class="nav_buttons" src="assets/images/nav/logo.png"></a></li>
+                        <li><a class="page-scroll" href="friends2.html"><img class="nav_buttons" src="assets/images/nav/friends.png"></a></li>
+                        <li><a class="page-scroll" href="dashboard.html"><img class="nav_buttons" src="assets/images/nav/profile.png" style="width: 60px; margin-right: 0px"></a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    <!-- End Nav -->
+    <!-- ========================================================================================== -->
+
+		<!-- Content Container Minus Navigation Bar -->
 		 <div class="content">
 
+                <!--  ========================================================= -->
 		 		<!-- Left Side bookshelf container -->
+
 		      	<div id="bookshelf_container" class="col-sm-6">
 		      		<img class="bookshelf" src="assets/images/shelf.png">
 
 
 						<!-- Book Search Section -->
 						<div class="search_shelf ">
-		  				<div class="books col-xs-3"><img src="assets/images/add_book.PNG" class="img-responsive" /></div>
-	 					<input id="txtBookSearch" class="col-xs-3" type="text">
+    		  				<div class="book_search_icon col-xs-3"><img src="assets/images/nav/search.PNG" class="img-responsive" /></div>
+    	 					<input id="txtBookSearch" class="col-xs-3" type="text">
 						</div>
 
 						<!-- Shelf -->
 		      			<div class="shelf">
-		  				<!-- Area books are added to shelf -->
-			  				<!-- <div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
-			  				<div class="books col-xs-3"><img src="assets/images/book1.PNG" class="img-responsive" /></div>
-			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
-			  				<div class="books col-xs-3"><img src="assets/images/book1.png" class="img-responsive" /></div>
-
-			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div>
-			  				<div class="books col-xs-3"><img src="assets/images/book1.PNG" class="img-responsive" /></div>
-			  				<div class="books col-xs-3"><img src="assets/images/book2.PNG" class="img-responsive" /></div> -->
-			  			</div>      	
+			  			</div>
 
 		  		</div><!-- End Left Side bookshelf container -->
 
+                <!--  ========================================================= -->
+
 				<!-- Main Right Side Content goes here -->
 		  		<div class="stuff_goes_here" class="col-sm-6">
+					<div class="infoContainer1">
+					    <div id="divDescription1"></div>
+					</div>
 
-					    <div id="divDescription"></div>
+					<div class=	"infoContainer2">
+						<div id="divDescription2"></div>
+					</div>
+		  		</div><!-- END Main Right Side Content -->
 
-		  		</div>
+            <!--  ========================================================= -->
 
-		</div>	<!-- End Main Content Container  -->
-
-<footer></footer>
+		</div>	<!-- End Content Container Minus Navigation Bar -->
 
 </div> <!-- End Main content wrapper that holds everything -->
 
+<!-- ========================================================================================== -->
+
+<footer></footer>
 
 
 
 
-
-
-<script>
-
-// JS for autosearch of books and display of results   =====================================
-
-
-$(document).ready(function () {  // only begin once page has loaded
-    $("#txtBookSearch").autocomplete({ // attach auto-complete functionality to textbox
-        // define source of the data
-        source: function (request, response) {
-            // url link to google books, including text entered by user (request.term)
-            var booksUrl = "https://www.googleapis.com/books/v1/volumes?printType=books&q=" + encodeURIComponent(request.term);
-            $.ajax({
-                url: booksUrl,
-                dataType: "jsonp",
-                success: function(data) {
-                    response($.map(data.items, function (item) {
-                        if (item.volumeInfo.authors && item.volumeInfo.title && item.volumeInfo.industryIdentifiers && item.volumeInfo.publishedDate)
-                        {
-                            return {
-                                // label value will be shown in the suggestions
-                                label: item.volumeInfo.title + ', ' + item.volumeInfo.authors[0] + ', ' + item.volumeInfo.publishedDate,
-                                // value is what gets put in the textbox once an item selected
-                                value: item.volumeInfo.title,
-                                // other individual values to use later
-                                title: item.volumeInfo.title,
-                                author: item.volumeInfo.authors[0],
-                                isbn: item.volumeInfo.industryIdentifiers,
-                                publishedDate: item.volumeInfo.publishedDate,
-                                image: (item.volumeInfo.imageLinks == null ? "" : item.volumeInfo.imageLinks.thumbnail),
-                                description: item.volumeInfo.description,
-                            };
-                        }
-                    }));
-                }
-            });
-        },
-        select: function (event, ui) {
-            // what to do when an item is selected
-            // first clear anything that may already be in the description
-            $('#divDescription').empty();
-            // we get the currently selected item using ui.item
-            // show a pic if we have one
-            if (this.image != '')
-            {
-                $('#divDescription').append('<img src="' + ui.item.image + '" style="float: left; padding: 10px;">');
-            }
-            // and title, author, and year
-            $('#divDescription').append('<h2><b>Title:</b> ' + ui.item.title  + '</h2>');
-            $('#divDescription').append('<p><b>Author:</b> ' + ui.item.author  + '</p>');
-            $('#divDescription').append('<p><b>First published year:</b> ' + ui.item.publishedDate  + '</p>');          
-            // and the usual description of the book
-            $('#divDescription').append('<p><b>Description:</b> ' + ui.item.description  + '</p>');
-            // and show the link to oclc (if we have an isbn number)
-            if (ui.item.isbn && ui.item.isbn[0].identifier)
-            {
-                $('#divDescription').append('<P><b>ISBN:</b> ' + ui.item.isbn[0].identifier + '</p>');
-                $('#divDescription').append('<a href="http://www.worldcat.org/isbn/' + ui.item.isbn[0].identifier + '" target="_blank">View item on worldcat</a>');
-            }
-            // add button to append the book on the shelf
-            var addBookButton = $('<button>');
-            addBookButton.addClass("addToShelf");
-
-            var addBookImage = $("<img>");
-            addBookImage.attr("src", "assets/images/add_book.png");
-
-            addBookButton.prepend(addBookImage);
-            // $('#divDescription').append('<img src="assets/images/add_book.png">');
-            $('#divDescription').append(addBookButton);
-
-            $('.addToShelf').on('click', function() {
-            	console.log("test");
-            	$(".shelf").append('<div class="books col-xs-3 delete"><img src=' + ui.item.image + ' class="img-responsive" /></div>');
-            });
-
-            $(document).on('click', '.delete', function(){
-            	$(this).remove();
-            });
-
-        },
-        minLength: 2 // set minimum length of text the user must enter
-    });
-
-});
-</script>
-
-
-
-
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script type="text/javascript" src="signin.js"></script>
 
 
 
