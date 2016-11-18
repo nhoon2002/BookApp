@@ -8,12 +8,9 @@
     messagingSenderId: "894990803879"
   };
 
-  var currentUser_uid;
-
 
 firebase.initializeApp(config);
 var database = firebase.database();
-
 
 //Clicking the log in button...
 $('#loginSubmit').on("click" , function() {
@@ -21,11 +18,13 @@ $('#loginSubmit').on("click" , function() {
    var userEmail = $('#userName').val().trim();
    var userPass =  $('#userPw').val().trim();
 
-   //firebase user creation steps
+   //firebase authorization requirement
    var auth = firebase.auth();
    var promise = auth.signInWithEmailAndPassword(userEmail, userPass)
       .then (function() {
-         window.location = "bookshelf.html";
+
+         // TODO window.location = "bookshelf.html";
+         //$(div).html(Welcome currentUser!)
       })
       .catch(function (error) {
          alert(error.message);
@@ -40,34 +39,56 @@ $('#createSubmit').on("click" , function() {
 
    var userEmail = $('#userName').val().trim();
    var userPass =  $('#userPw').val().trim();
-   // var userDisplay = $('#userDisplay').val().trim();
+   var userDisplay = $('#userDisplay').val().trim();
+   var userGender = $('#userGender').val().trim();
 
 
 
    var auth = firebase.auth();
    var promise = auth.createUserWithEmailAndPassword(userEmail, userPass)
       .then(function() {
+         var user = firebase.auth().currentUser;
+         database.ref("users").child(user.uid).set({
+            email: user.email,
+            nickname: userDisplay,
+            gender: userGender
+         });
+         // alert('Please log-in again!');
+         window.location = "signin.html";//reloads the log-in page
 
-         window.location = "signin.html"//reloads the log-in page
-         alert('Please log-in again!');
       })
-
       .catch(function (error) {
          alert(error.message);
       });
 
-         var user = firebase.auth().currentUser;
-         console.log(user);
-         var email = user.email;
-         var uid = user.uid;
 
-         //creates a new node on firebase under the UID of the user that just created the account.
-         database.ref("users").child(user.uid).set({
-            email: user.email
-         })
+
+
+
+
 
 
 });
+
+
+
+//Each time an account is created,
+database.ref("users").on("child_added", function(snapshot) {
+   console.log(snapshot.val());
+   console.log(snapshot.val().nickname);
+   console.log(firebase.auth().currentUser.uid);
+
+
+});
+
+//TODO Add an 'about me' or a 'welcome' dashboard
+
+//TODO Each time an 'add book' button is pressed: push each 'book-object (isbn, imgurl, etc)' under 'bookshelf' child under the user branch.
+
+//TODO Each time 'delete book' button is pressed, find an identifier for the specific book and delete the child from the database.
+
+//TODO Each time a user-avatar is clicked, repopulate the bookshelf with data that corresponds to the user, with either a active-css pseudo or appending bookshelf name to the top.
+
 
 //Clicking the log-out button...
 $('.log_out').on('click', function(){
@@ -85,13 +106,22 @@ $('.log_out').on('click', function(){
 });
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
+   var refObject = firebase.database().ref().child('users');
+   console.log(firebase.auth().currentUser.uid);
+
+   // debugger;
 
    if(firebaseUser) { //if user is logged in...
-      console.log("logged in as: "+firebaseUser);
-
+      // currentUser = firebaseUser;
+      console.log("logged in as: " + firebaseUser.email);
+      // refObject.on("child_added", function(snapshot) {
+      //    //
+      //    console.log(snapshot.val().key);
+      // });
 
    } else {
       console.log('not logged in');
+
    }
 
       //Stores information of currently logged user
