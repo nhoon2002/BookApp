@@ -53,6 +53,13 @@ input[type=text]:focus {
 		padding: 5px;
 }
 
+.content-signin {
+		/*border: 4px solid #ff00ff;*/
+		margin-top: 120px;
+		overflow: 0 auto;
+		padding: 5px;
+}
+
 #mainbody {
 	margin-top: 50px;
 }
