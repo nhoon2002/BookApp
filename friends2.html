@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ========================================================================================== -->
+<head>
+    <meta charset="UTF-8">
+    <title>My Book Library | Bookshelf</title>
+    <meta name="description" content="My Book Library">
+    <meta name="author" content="libraries saved">
+
+    <!-- Stylesheet for Auto-Search  -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Bootstrap Components -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--  CSS  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/nav.css">
+
+</head>
+<!-- ========================================================================================== -->
+
+
+<body>
+
+
+<!--  Main content wrapper that holds everything -->
+<div class="container">
+
+    <!-- ========================================================================================== -->
+    <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+
+                    <!-- Hamburger menu button when mobile size -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                        <!-- Top left Logo -->
+                        <img class="logo" src="assets/images/nav/logo.png">
+                        <!-- Main Title -->
+                        <h1 class="logo_title">MyBookLibrary</h1>
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+                        <li><a class="page-scroll" href="bookshelf.html"><img class="nav_buttons" src="assets/images/nav/logo.png"></a></li>
+                        <li><a class="page-scroll" href="friends2.html"><img class="nav_buttons" src="assets/images/nav/friends.png"></a></li>
+                        <li><a class="page-scroll" href="dashboard.html"><img class="nav_buttons" src="assets/images/nav/profile.png" style="width: 60px; margin-right: 0px"></a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    <!-- End Nav -->
+    <!-- ========================================================================================== -->
+
+		<!-- Main Content Container  -->
+		 <div class="content">
+
+		 		<!-- Left Side bookshelf container -->
+
+		      	<div id="bookshelf_container" class="col-sm-6">
+		      		<img class="bookshelf" src="assets/images/shelf.png">
+
+
+						<!-- Book Search Section -->
+						<div class="search_shelf ">
+		  				<!-- <div class="book_search_icon col-xs-3"><img src="assets/images/nav/search.PNG" class="img-responsive" /></div> -->
+	 					<!-- <input id="txtBookSearch" class="col-xs-3" type="text"> -->
+                        <h1 id="shelf">Your Collection</h1>
+						</div>
+
+						<!-- Shelf -->
+		      			<div class="shelf">
+			  			</div>
+
+		  		</div><!-- End Left Side bookshelf container -->
+
+				<!-- Main Right Side Content goes here -->
+              <div class="stuff_goes_here" class="col-sm-6">
+                  <h3>Friends</h3>
+
+                    <div id="friendpanel">
+                        <div class="placeholders"> </div>
+                    </div>
+
+               </div> <!-- END Main Right Side Content -->
+
+            </div> <!-- End container div -->
+
+		</div>	<!-- End Main Content Container  -->
+
+</div> <!-- End Main content wrapper that holds everything -->
+
+<footer></footer>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script type="text/javascript" src= 'signin.js'></script>
+
+
+
+</body>
+</html>

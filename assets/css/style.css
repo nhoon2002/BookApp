@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'momtw';
+  src: url('momtw.TTF')
+}
+
+.prof {
+   width: 30%;
+}
+
 body {
 
 }
@@ -26,6 +35,9 @@ input[type=text] {
 input[type=text]:focus {
     width: 100%;
 }
+/*=============================================================================*/
+/*=========================================*/
+/*Main Containers*/
 
 /*  wraps the entire content of the page including the Nav  */
 .container {
@@ -35,23 +47,55 @@ input[type=text]:focus {
 
 /*  Wraps the main content  */
 .content {
-		border: 4px solid #ff00ff;
-		overflow: auto;
+		/*border: 4px solid #ff00ff;*/
+		margin-top: 100px;
+		overflow: 0 auto;
+		padding: 5px;
+}
+
+#mainbody {
+	margin-top: 50px;
 }
 
 /*  Right Side Content Container  */
 .stuff_goes_here {
 	background-color:;
-	border: 2px solid #00ff40;
+	/*border: 2px solid #00ff40;*/
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 	display: inline-block;
-	height: 100%;
-	height: 600px;
+	height: 602px;
 	max-width: 500px;
 	float: left;
 	padding: 0px;
-	width: 100%;
+	overflow: auto;
+	width: 50%;
 }
 
+/*Book Shelf*/
+#bookshelf_container {
+	/*border: 4px solid #99ffdd;*/
+	display: inline-block;
+	height: 100%;
+	margin: 0 auto;
+	max-height: 600px;
+	max-width: 400px;
+	padding: 0px;
+	position: relative;
+	width: 50%;
+}
+
+/*=========================================*/
+/*=============================================================================*/
+/*Dashboard CSS*/
+
+#divAvatar img {
+	width: 200px;
+}
+.dashboard {
+	font-size: 20px;
+}
+
+/*=========================================*/
 /*=============================================================================*/
 /*nav Stuff*/
 /*nav Stuff*/
@@ -59,7 +103,9 @@ input[type=text]:focus {
 /*nav Container*/
 nav {
 	background-color: #e6f0ff;
-	width: 100%;	
+	border: 4px solid #000;
+	overflow: auto;
+	width: 100%;
 }
 
 .logo {
@@ -70,58 +116,64 @@ nav {
 }
 .logo_title {
 	display: inline-block;
+	font-family: 'momtw';
+}
+.book_search_icon {
+	top: 10px;
 }
 
 #txtBookSearch {
 	height: 40px;
 	margin: 10px;
 	width: 200px;
+	top: 10px;
 }
 
-/*==================================*/
+/*=======================*/
 /*nav Buttons*/
+/*nav.css*/
+/*=======================*/
+/*Friends CSS*/
 
-.nav_buttons_container {
-	float: right;
-	overflow: auto;
-	width: auto;
+#friendpanel {
+	text-align: center;
 }
-.nav_buttons {
-	display: inline-block;
+img.prof {
 	padding: 10px;
-	width: 80px;
 }
+
+
+/*=======================*/
+
 
 /*=============================================================================*/
-/*Book Shelf*/
+/*Book Shelf Stuff*/
 /*Book Shelf*/
 
-#bookshelf_container { 
-	border: 4px solid #99ffdd;
-	display: inline-block;
-	height: 100%;
-	margin: 0 auto;
-	max-height: 600px;
-	max-width: 400px;
-	padding: 0px;
-	position: relative;
-	width: 100%;
-}
-.books {
-	border: 2px solid #99ffdd;  
+.books img {
+/*	border: 2px solid #99ffdd;*/
+	-webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.77);
+	-moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.77);
+	box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.77);
+	height: 85px;
 	margin-bottom: 20px;
-	
+	position: relative;
+	top: 5px;
+
 }
 /*  bookshelf image  */
 .bookshelf {
-	border: 5px solid #0040ff;  
+/*	border: 2px solid #0040ff;*/
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.78);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.78);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.78);
 	height: 100%;
 	position: relative;
 	overflow: auto;
 	width: 100%;
-
 }
-/*  shelf row  */
+
+/*  search shelf row  */
 .search_shelf {
 	left: 20px;
 	max-width: 400px;
@@ -134,28 +186,50 @@ nav {
 .shelf {
 	left: 0px;
 	max-width: 400px;
+	padding: 0 15px 0 15px;
 	position: absolute;
 	width: 98%;
 	top: 145px;
 }
 
+/*Persons collection name title on bookshelf*/
+#shelf {
+	padding-left:15px;
+	position: relative;
+	font-family: 'linowrite';
+	text-shadow: 0 0 3px #000;
+	top: -5px;
+}
 /*=============================================================================*/
 /*  Book Information Section  */
-#divDescription {
+#divDescription1{
+	overflow: auto;
+	padding: 20px;
+}
+#divDescription2{
 	padding: 20px;
 }
 .book {
 	padding: 10px;
 	width: 40%;
 }
-.book_title {
 
+/* add remove buttons */
+.addRemove img {
+	margin: 10px;
+	width: 50px;
 }
+
+.panel {
+	margin-top: 20px;
+}
+
 /*=============================================================================*/
 footer {
 	background-color: #e6f0ff;
+	clear: both;
 	height: 100px;
-	width: 100%;	
+	width: 100%;
 }
 
 @media screen and (max-width: 980px) {
@@ -163,10 +237,37 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+	/*  Wraps the main content  */
+	.content {
+		/*border: 4px solid #ff00ff;*/
+		margin-top: 80px;
+		overflow: auto;
+	}
 
 }
 
 @media screen and (max-width: 640px) {
+
+	.book_search_icon {
+	top: 5px;
+	}
+
+	.books img {
+		/*border: 2px solid #99ffdd;*/
+		height: 85px;
+		margin-bottom: 20px;
+		position: relative;
+		top: -10px;
+
+	}
+
+	#txtBookSearch {
+	height: 40px;
+	margin: 10px;
+	width: 200px;
+	top: 5px;
+	}
+
 	.shelf-bg {
 		background: url(../../assets/images/shelf.PNG) no-repeat;
 		width:100%;
@@ -176,5 +277,10 @@ footer {
 	img {
 		height: 100px;
 		width: 100px;
+		float: right;
+	}
+
+	#bookshelf_container {
+		margin-left: ;
 	}
 }

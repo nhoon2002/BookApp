@@ -1,0 +1,86 @@
+/*=============================================================================*/
+/*nav Stuff*/
+/*nav Stuff*/
+
+/*nav Container*/
+navbar {
+	background-color: #e6f0ff;
+	border: 4px solid #000;
+	overflow: auto;
+	width: 100%;	
+}
+
+
+.logo {
+	display: inline-block;
+	height: 100%;
+	left: 20px;
+	max-width: 75px;
+	position: relative;
+	top: 5px;
+	width: 100%;
+}
+.logo_title {
+	display: inline-block;
+	font-family: 'momtw';
+	position: relative;
+	left: 40px;
+	top: 15px;
+}
+
+/*============*/
+/*nav Buttons*/
+.navbar-nav {
+	float: right;
+	overflow: auto;
+	width: auto;
+	padding-right: 100px;
+}
+.nav_buttons {
+	display: inline-block;
+	padding: 10px;
+	width: 80px;
+}
+
+
+@media screen and (max-width: 991px) {
+	.navbar-nav {
+		padding-right: 0px;
+	}	
+}
+
+/*@media screen and (max-width: 640px) {
+
+}*/
+
+@media screen and (max-width: 768px) {
+.logo {
+	display: inline-block;
+	padding: 5px;
+	left: 5px;
+	position: relative;
+	top: -2px;
+	width: 5em;
+}
+
+	.logo_title {
+		display: inline-block;
+		font-family: 'momtw';
+		font-size: 2em;
+		left: 10px;
+		position: relative;
+		top: 0px;
+	}
+	.navbar-toggle {
+	  border: none;
+	  outline: none;
+	  margin-top: 20px;
+	}
+	.page-scroll .nav_buttons {
+	}
+.nav_buttons {
+	padding: 0px;
+	width: 50px;
+	height: 50px;
+}
+}
